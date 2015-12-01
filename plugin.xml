@@ -9,7 +9,7 @@
     <description>Cordova/Phonegap plugin.</description>
 
     <!-- 参数传递 -->
-    <preference name="API_KEY" />
+    <preference name="PUSH_API_KEY" />
 
     <!-- android -->
     <platform name="android">
@@ -132,7 +132,7 @@
             <receiver android:name="cn.jpush.android.service.AlarmReceiver"/>
             <!-- Required  . Enable it you can get statistics data with channel -->
             <meta-data android:name="JPUSH_CHANNEL" android:value="developer-default"/>
-            <meta-data android:name="JPUSH_APPKEY" android:value="$API_KEY"/>
+            <meta-data android:name="JPUSH_APPKEY" android:value="$PUSH_API_KEY"/>
         </config-file>
 
         <!--源文件的路径和目标文件路径，src为已经编写好的java代码路径，target-dir为需要生成的android工程中该java源码路径，与上面的java代码路径保持一致-->
@@ -143,7 +143,5 @@
 
         <source-file src="src/android/cn/lulugo/plugin/JPushPlugin.java" target-dir="src/cn/lulugo/plugin"/>
         <source-file src="src/android/cn/lulugo/plugin/MyReceiver.java" target-dir="src/cn/lulugo/plugin"/>
-        <source-file src="layout/jpush_notification_layout.xml" target-dir="res/layout"/>
-        <source-file src="res/jpush_notification_icon.png" target-dir="res/drawable"/>
     </platform>
 </plugin>

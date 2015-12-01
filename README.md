@@ -9,10 +9,10 @@ http://docs.jpush.io/resources/
 
 install plugin
 
-cordova plugin add https://github.com/leiwang0418/com.51amani.baidu.location.git --variable API_KEY="API_KEY"
+cordova plugin add https://github.com/leiwang0418/com.51amani.baidu.location.git --variable PUSH_API_KEY="API_KEY"
 
 eg:cordova plugin add https://github.com/leiwang0418/com.51amani.baidu.location.git --variable API_KEY="Z4hwG8B2LiSVuB2cV5bfPFf4"
-eg:cordova plugin add D:\plugins\cn.lulugo.jpush --variable API_KEY="5f1364e9ab147174bc93e359"  PACKAGE_NAME="cn.lulugo.plugin"
+eg:cordova plugin add D:\plugins\cn.lulugo.jpush --variable PUSH_API_KEY="5f1364e9ab147174bc93e359"  PACKAGE_NAME="cn.lulugo.plugin"
 remove plugin
 
 cordova plugin remove cn.lulugo.jpush
