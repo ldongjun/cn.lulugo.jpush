@@ -1,0 +1,30 @@
+{
+  "version": "0.0.1",
+  "name": "cn.lulugo.jpush",
+  "cordova_name": "Jpush",
+  "description": "Cordova/Phonegap plugin .",
+  "repository": {
+     //"type": "git",
+     // "url": "https://github.com/leiwang0418/com.51maani.template.git"
+  },
+  "cordova": {
+    "id": "cn.lulugo.jpush"
+  },
+  //"issue": "https://github.com/leiwang0418/com.51amani.template/issues",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova",
+    "cordova-android",
+    "phonegap",
+    "jpush"
+  ],
+  "platforms": [
+    "android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.0.0"
+    }
+  ]
+}
