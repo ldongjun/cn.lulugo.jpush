@@ -2,7 +2,7 @@
 var JPushPlugin = function(){
 };
 
-JPushPlugin.prototype.test = function(successCallback, errorCallback) {
+JPushPlugin.prototype.getRegistrationId = function(successCallback, errorCallback) {
 	return cordova.exec(successCallback, errorCallback, 'JPushPlugin', "", []);
 };
 
