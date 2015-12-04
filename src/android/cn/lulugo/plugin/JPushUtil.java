@@ -13,11 +13,21 @@ public class JPushUtil {
 
     public static ExecutorService singleThreadExecutor = null;
 
+
+    private static IServiceCallback listener = null;//2.1、在类中定义接口对象
+    public void setCallbackListener(IServiceCallback cbl){//2.2
+        this.listener = cbl;
+    }
+
+
     //设置推送ID
     public static void setCurPushRegistrationId(String id) {
         CUR_PUSH_REGISTRATION_ID = id;
         //存到服务器
-        saveRegistrationId();
+        if(listener != null)//2.3、在关心的方法中，调用接口对象中定义的方法
+        {
+            listener.saveRegistrationId();
+        }
     }
 
     /**
