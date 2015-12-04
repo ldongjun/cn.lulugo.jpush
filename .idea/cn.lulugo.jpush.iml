@@ -20,7 +20,14 @@
         </SOURCES>
       </library>
     </orderEntry>
-    <orderEntry type="library" exported="" name="jpush-android-2.0.5" level="project" />
-    <orderEntry type="library" name="jpush-android-2.0.5 (2)" level="project" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://$MODULE_DIR$/libs/jpush-android-2.0.5.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
   </component>
 </module>
