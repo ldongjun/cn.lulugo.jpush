@@ -5,13 +5,11 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-
+import cn.jpush.android.api.JPushInterface;
 import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.Iterator;
-
-import cn.jpush.android.api.JPushInterface;
 
 /**
  * 自定义接收器
@@ -32,6 +30,7 @@ public class MyReceiver extends BroadcastReceiver {
             String regId = bundle.getString(JPushInterface.EXTRA_REGISTRATION_ID);
             Log.d(TAG, "[MyReceiver] 接收Registration Id : " + regId);
             //send the Registration Id to your server...
+            JPushUtil.setCurPushRegistrationId(regId);
 
         } else if (JPushInterface.ACTION_MESSAGE_RECEIVED.equals(intent.getAction())) {
             Log.d(TAG, "[MyReceiver] 接收到推送下来的自定义消息: " + bundle.getString(JPushInterface.EXTRA_MESSAGE));
@@ -45,12 +44,17 @@ public class MyReceiver extends BroadcastReceiver {
         } else if (JPushInterface.ACTION_NOTIFICATION_OPENED.equals(intent.getAction())) {
             Log.d(TAG, "[MyReceiver] 用户点击打开了通知");
 
+
             //打开自定义的Activity
+//            Intent launch = new Intent(context, JumpToPageActivity.class);
             Intent launch = context.getPackageManager().getLaunchIntentForPackage(context.getPackageName());
             launch.addCategory(Intent.CATEGORY_LAUNCHER);
-            launch.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
+//            launch.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_SINGLE_TOP);
             launch.putExtras(bundle);
-            //i.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            launch.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+            //
+            String type = bundle.getString(JPushInterface.EXTRA_EXTRA);
+            Log.e(TAG, "[MyReceiver] 用户点击打开了通知的 type ： " + type);
             context.startActivity(launch);
 
         } else if (JPushInterface.ACTION_RICHPUSH_CALLBACK.equals(intent.getAction())) {

@@ -1,4 +1,4 @@
-
+cordova.define("cn.lulugo.jpush.JPushPlugin", function(require, exports, module) { 
 var JPushPlugin = function(){
 };
 
@@ -8,3 +8,5 @@ JPushPlugin.prototype.getRegistrationId = function(successCallback, errorCallbac
 
 module.exports = new JPushPlugin();
 
+
+});

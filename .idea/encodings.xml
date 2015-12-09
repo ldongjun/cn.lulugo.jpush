@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/IServiceCallback.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/JPushPlugin.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/JPushUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/LuluThread.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/MyReceiver.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/www/android/JPushPlugin.js" charset="UTF-8" />
+  </component>
+</project>

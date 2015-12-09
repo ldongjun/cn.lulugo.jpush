@@ -25,7 +25,7 @@
         <!--src="www/template.js"为已经写好的js文件路径，与js中调用的类名保持一致-->
         <js-module src="www/android/JPushPlugin.js" name="JPushPlugin">
             <!-- 插件在js中调用的类名 -->
-            <clobbers target="jPushPlugin"/>
+            <clobbers target="JPushPlugin"/>
         </js-module>
 
         <!--该插件需要的权限申明，根据需要自行定义-->
@@ -145,5 +145,6 @@
         <source-file src="src/android/cn/lulugo/plugin/MyReceiver.java" target-dir="src/cn/lulugo/plugin"/>
         <source-file src="src/android/cn/lulugo/plugin/JPushUtil.java" target-dir="src/cn/lulugo/plugin"/>
         <source-file src="src/android/cn/lulugo/plugin/LuluThread.java" target-dir="src/cn/lulugo/plugin"/>
+        <source-file src="src/android/cn/lulugo/plugin/IServiceCallback.java" target-dir="src/cn/lulugo/plugin"/>
     </platform>
 </plugin>

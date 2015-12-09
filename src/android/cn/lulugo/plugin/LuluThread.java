@@ -22,10 +22,10 @@ public class LuluThread implements Runnable {
         try {
             while (!isStop) {
                 Thread.sleep(100000);
-                Log.e("TAG", "22222222222222================================================ " );
+//                Log.e("JPUSH", "22222222222222================================================ " );
                 String registrationId = JPushInterface.getRegistrationID(curContext);
                 if (null != registrationId && !"".equals(registrationId)) {
-                    Log.e("TAG", "444444444================================================ " + registrationId);
+//                    Log.e("JPUSH", "444444444================================================ " + registrationId);
                     JPushUtil.setCurPushRegistrationId(registrationId);
                     isStop = true;
                     JPushUtil.singleThreadExecutor.shutdown();
