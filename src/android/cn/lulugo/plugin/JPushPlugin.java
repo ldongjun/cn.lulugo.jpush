@@ -1,5 +1,6 @@
 package cn.lulugo.plugin;
 
+import android.util.Log;
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
 import org.json.JSONArray;
@@ -16,10 +17,10 @@ public class JPushPlugin extends CordovaPlugin {
     @Override
     public boolean execute(String action, JSONArray data, CallbackContext callbackContext) throws JSONException {
         callbackContext.success();
-        JPushUtil.getRegistrationId(this.cordova.getActivity().getApplicationContext());
         String sid = data != null ? data.getString(0) : "";
         JPushUtil.setSID(sid);
-//        Log.e("TAG", "JPushUtil.setSID================================================ " +data.getString(0));
+        JPushUtil.getRegistrationId(this.cordova.getActivity().getApplicationContext());
+        Log.e("TAG", "JPushUtil.setSID================================================ " + data.getString(0));
         return true;
     }
 

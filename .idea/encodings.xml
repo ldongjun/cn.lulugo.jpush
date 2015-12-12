@@ -1,6 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding">
+    <file url="file://D:/driver/platforms/android/assets/www/plugins/cn.lulugo.jpush/www/android/JPushPlugin.js" charset="UTF-8" />
+    <file url="file://D:/driver/platforms/android/assets/www/plugins/cn.lulugo.jpush/www/android/JPushPlugin.js" charset="UTF-8" />
+    <file url="file://D:/driver/platforms/android/assets/www/templates/browse.html" charset="UTF-8" />
+    <file url="file://D:/driver/platforms/android/assets/www/templates/playlists.html" charset="UTF-8" />
+    <file url="file://D:/driver/platforms/android/assets/www/views/test.html" charset="UTF-8" />
+    <file url="file://D:/driver/platforms/android/platform_www/plugins/cn.lulugo.jpush/www/android/JPushPlugin.js" charset="UTF-8" />
+    <file url="file://D:/driver/platforms/android/src/cn/lulugo/plugin/JPushPlugin.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/IServiceCallback.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/JPushPlugin.java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/android/cn/lulugo/plugin/JPushUtil.java" charset="UTF-8" />

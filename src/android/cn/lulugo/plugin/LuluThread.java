@@ -15,20 +15,21 @@ public class LuluThread implements Runnable {
         this.curContext = context;
     }
 
-    public boolean isStop = false;
+    public static boolean isStop = false;
 
     @Override
     public void run() {
         try {
             while (!isStop) {
                 Thread.sleep(100000);
-//                Log.e("JPUSH", "22222222222222================================================ " );
                 String registrationId = JPushInterface.getRegistrationID(curContext);
-                if (null != registrationId && !"".equals(registrationId)) {
-//                    Log.e("JPUSH", "444444444================================================ " + registrationId);
+                String sid = JPushUtil.getSID();
+                Log.e("JPUSH", "registrationId  =  " + registrationId );
+                if (null != registrationId && !"".equals(registrationId) && null != sid && !"".equals(sid)) {
+                    Log.e("JPUSH", "registrationId is not null :  " + registrationId);
                     JPushUtil.setCurPushRegistrationId(registrationId);
                     isStop = true;
-                    JPushUtil.singleThreadExecutor.shutdown();
+//                    JPushUtil.singleThreadExecutor.shutdown();
                 }
             }
         } catch (InterruptedException e) {
